@@ -6,6 +6,7 @@
   "repository": "https://github.com/dirtyhenry/poc-twilio",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "twilio": "^3.36.0"
   }
 }
