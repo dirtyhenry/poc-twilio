@@ -4,7 +4,7 @@
 
 ## Installation
 
-With **Node** and **Yarn** installed:
+With **Homebrew**, **Node** and **Yarn** installed:
 
 ```bash
 make install
@@ -17,6 +17,10 @@ Then create a `.env` file based on `.env.sample`, and replacing the required val
 ```bash
 make send_sms
 ```
+
+## Deployment
+
+This project is deployed via Heroku.
 
 ## Contributing
 

@@ -1,4 +1,5 @@
 install:
+	brew bundle
 	yarn install
 
 run: 

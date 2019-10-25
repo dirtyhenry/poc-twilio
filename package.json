@@ -2,7 +2,7 @@
   "name": "poc-twilio",
   "version": "0.1.0",
   "description": "A playground to test Twilio SMS sending/receiving capabilities",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/dirtyhenry/poc-twilio",
   "license": "MIT",
   "dependencies": {
