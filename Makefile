@@ -1,8 +1,11 @@
 install:
 	yarn install
 
-clean:
-	rm -rf node_modules
+run: 
+	node server.js
 
 send_sms:
 	node send_sms.js
+	
+clean:
+	rm -rf node_modules
