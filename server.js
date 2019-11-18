@@ -1,6 +1,6 @@
 const http = require("http");
 const express = require("express");
-const MessagingResponse = require("twilio").twiml.MessagingResponse;
+const twilio = require("twilio");
 const bodyParser = require("body-parser");
 
 const port = process.env.PORT || 5000;
@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => res.send("Welcome to poc-twilio"));
 
-app.post("/sms", (req, res) => {
+app.post("/sms", twilio.webhook({ validate: true }), (req, res) => {
   if (req.body == null || req.body.Body == null) {
     throw Error("Invalid message");
   }
