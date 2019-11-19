@@ -850,9 +850,9 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
-twilio@dirtyhenry/twilio-node#08cd3412:
+twilio@dirtyhenry/twilio-node#0d02ae20:
   version "3.37.1"
-  resolved "https://codeload.github.com/dirtyhenry/twilio-node/tar.gz/08cd341215819b9c874bdd9077d14d4223e12816"
+  resolved "https://codeload.github.com/dirtyhenry/twilio-node/tar.gz/0d02ae208915303ece12a9fc6bef3f833edada28"
   dependencies:
     "@types/express" "^4.17.2"
     deprecate "1.0.0"
