@@ -11,34 +11,38 @@ axios.defaults.headers.post["Content-Type"] = "application/json";
 
 let latestMessage = undefined;
 const app = express();
-//app.use(express.urlencoded());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => res.send("Hello!"));
 
-app.post("/sms", twilio.webhook(), (req, res) => {
-  if (req.body == null || req.body.Body == null) {
-    throw Error("Invalid message");
+// Not using Twilio's webhook until the following is resolved:
+//  https://github.com/twilio/twilio-node/issues/505
+app.post(
+  "/sms",
+  /* twilio.webhook(),*/ (req, res) => {
+    if (req.body == null || req.body.Body == null) {
+      throw Error("Invalid message");
+    }
+
+    const message = req.body.Body;
+    console.log(`New incoming SMS received: ${message}`);
+
+    res.writeHead(204);
+    res.end();
+
+    latestMessage = message;
+
+    if (process.env.SLACK_WEBHOOK_URL) {
+      axios
+        .post(process.env.SLACK_WEBHOOK_URL, {
+          text: message
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
   }
-
-  const message = req.body.Body;
-  console.log(`New incoming SMS received: ${message}`);
-
-  res.writeHead(204);
-  res.end();
-
-  latestMessage = message;
-
-  if (process.env.SLACK_WEBHOOK_URL) {
-    axios
-      .post(process.env.SLACK_WEBHOOK_URL, {
-        text: message
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-  }
-});
+);
 
 app.get("/latest", (req, res) => {
   if (
