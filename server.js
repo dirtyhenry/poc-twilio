@@ -11,7 +11,7 @@ axios.defaults.headers.post["Content-Type"] = "application/json";
 
 let latestMessage = undefined;
 const app = express();
-app.use(express.urlencoded());
+//app.use(express.urlencoded());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => res.send("Hello!"));
