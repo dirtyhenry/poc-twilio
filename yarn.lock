@@ -25,10 +25,10 @@
     "@types/node" "*"
     "@types/range-parser" "*"
 
-"@types/express@^4.17.1":
-  version "4.17.1"
-  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.1.tgz#4cf7849ae3b47125a567dfee18bfca4254b88c5c"
-  integrity sha512-VfH/XCP0QbQk5B5puLqTLEeFgR8lfCJHZJKkInZ9mkYd+u8byX0kztXEQxEk4wZXJs8HI+7km2ALXjn4YKcX9w==
+"@types/express@^4.17.2":
+  version "4.17.2"
+  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.2.tgz#a0fb7a23d8855bac31bc01d5a58cadd9b2173e6c"
+  integrity sha512-5mHFNyavtLoJmnusB8OKJ5bshSzw+qkMIBAobLrIM48HJvunFva9mOa6aBwh64lBFyNwBbs0xiEFuj4eU/NjCA==
   dependencies:
     "@types/body-parser" "*"
     "@types/express-serve-static-core" "*"
@@ -850,12 +850,12 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
-twilio@^3.36.0:
-  version "3.36.0"
-  resolved "https://registry.yarnpkg.com/twilio/-/twilio-3.36.0.tgz#b3ad67a69612885a517df7f7637423a369ebb6a5"
-  integrity sha512-rj042yEMNjE+Ze3XL2SMvxJOLik8EEMu+nkEc7sbf8c/9cdsJfdKienl9eEWHjsT2H5xn3zqZHDNvZLypA2Nxg==
+twilio@^3.37.1:
+  version "3.37.1"
+  resolved "https://registry.yarnpkg.com/twilio/-/twilio-3.37.1.tgz#048270adf473c2e0833bd234ccd88f6a25fc4fa5"
+  integrity sha512-BdLOmO2WsQuVh8J8h44mKUE72FTVCFnv60wvEsJqhHgEOi5m2f9Lq7gPE9KFmVLohvPukNrlxhhc4ZSPH+HLyg==
   dependencies:
-    "@types/express" "^4.17.1"
+    "@types/express" "^4.17.2"
     deprecate "1.0.0"
     jsonwebtoken "^8.5.1"
     lodash "^4.17.15"
