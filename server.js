@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => res.send("Hello!"));
 
-app.post("/sms", (req, res) => {
+app.post("/sms", twilio.webhook({ protocol: "https" }), (req, res) => {
   if (req.body == null || req.body.Body == null) {
     throw Error("Invalid message");
   }

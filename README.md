@@ -1,6 +1,6 @@
 # Twilio Playground
 
-`poc-twilio` is a playground to test **Twilio SMS sending/receiving capabilities**.
+`poc-twilio` is a playground around **Twilio’s SMS sending/receiving capabilities**.
 
 ## Installation
 
@@ -14,9 +14,23 @@ Then create a `.env` file based on `.env.sample`, and replacing the required val
 
 ## Usage
 
+### Sending SMS
+
 ```bash
 make send_sms
 ```
+
+### Receiving SMS
+
+By running `server.js`, you create a server with 3 endpoints:
+
+- `GET /`: a simple greeting health check;
+- `POST /sms`: use this endpoint as Twilio Phone Number’s Messaging incoming webhook;
+- `GET /latest`: returns the last received SMS content stored in memory.
+
+Optionnaly, the `/sms` endpoint can forward received texts to a Slack channel (cf. `.env.sample` for configuration).
+
+⚠️ For some reason, the webhook doesn’t seem to be get called when texts were sent from Twilio’s platform itself. 🤷‍♂️
 
 ## Deployment
 
